@@ -243,7 +243,9 @@ save
     endif
 
 
-    call fd_emiss(freq=freq,tht=tht,sst=sst,wind=xssws,phir=xphir, &
+    ! TM 06/29/226
+	! bug fix. include salinity in the call
+	call fd_emiss(freq=freq,tht=tht,sst=sst,sal=xsal,wind=xssws,phir=xphir, &
                   emiss_0=xe0, emiss_wind=xewind, emiss_phi=xestokes, eharm=xeharm)
 
 
